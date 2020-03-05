@@ -19,7 +19,7 @@ public class LogController {
 
     @PostMapping("/log")
     public String log(@RequestParam("logString") String logString){
-        System.out.println(logString);
+        //System.out.println(logString);
         log.info(logString);
         JSONObject object = JSONObject.parseObject(logString);
         object.put("ts", System.currentTimeMillis());
